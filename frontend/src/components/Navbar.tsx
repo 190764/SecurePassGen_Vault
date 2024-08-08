@@ -9,7 +9,7 @@ const NavBar: FC<NavBarProps> = ({ loggedIn }) => {
   const [redirect, setRedirect] = useState(false);
   const { user, logoutUser } = useContext(AuthContext);
   const onClick = () => {
-    if (confirm('Do you want to logout? Seriously why tho 🥺')) {
+    if (confirm('Do you want to logout ?')) {
       if (user !== null) logoutUser(user);
       setRedirect(true);
     }
@@ -20,8 +20,8 @@ const NavBar: FC<NavBarProps> = ({ loggedIn }) => {
       <div className="flex mx-auto gap-3 justify-between bg-violet-950 h-16 text-white">
         <div className="ml-10 pt-4 font-outfit font-semibold">
           <h1 className="text-2xl">
-            <span className="text-orange-400">&lt;</span>Pass
-            <span className="text-orange-400">Man/&gt;</span>
+            <span className="text-orange-400">&lt;</span>SecurePassGen
+            <span className="text-orange-400">Vault/&gt;</span>
           </h1>
         </div>
         {!loggedIn ? (

@@ -34,7 +34,7 @@ const Manager = () => {
             text-center
         "
         >
-          Don't get hacked. Use Pass<span className="text-orange-400">Man</span>{' '}
+          Don't get hacked. Use SecurePassGen<span className="text-orange-400">Vault</span>{' '}
           to keep your passwords safe.
         </h1>
       </div>

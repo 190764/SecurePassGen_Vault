@@ -118,8 +118,8 @@ const Display = () => {
             "
         >
           <span className="text-orange-400">&lt;</span>
-          <span>Pass</span>
-          <span className="text-orange-400">Man/&gt;</span>
+          <span>SecurePassGen</span>
+          <span className="text-orange-400">Vault/&gt;</span>
         </h1>
         <div
           className="

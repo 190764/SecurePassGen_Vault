@@ -37,7 +37,7 @@ const sendOTP = asyncHandler(async (req, res) => {
   const hashedOTP = await bcrypt.hash(generatedOtp, 10);
   const mailSent = await transport.sendMail({
     to: email,
-    from: 'tanmay.shukla629@gmail.com',
+    from: 'bobbyrajput.1026@gmail.com',
     subject: 'OTP for account verification',
     html: `<p>Kindly enter the otp : ${generatedOtp} for email verification. This otp is valid for 5 mins</p>`,
   });
