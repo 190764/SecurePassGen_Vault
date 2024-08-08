@@ -49,7 +49,7 @@ const Modal = () => {
                 text-center    
             "
           >
-            You're not logged in! You cheeky bastard, trying to snoop ?
+            You're not logged in !Why trying to snoop ?
           </div>
           <button
             className="
