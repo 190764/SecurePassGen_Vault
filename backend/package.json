@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js"
   },
-  "author": "Tanmay Shukla",
+  "author": "Mukul Rajput",
   "license": "ISC",
   "devDependencies": {
     "dotenv": "^16.4.5",
