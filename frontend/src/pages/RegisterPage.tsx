@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState, ChangeEvent } from 'react';
 import { AuthContext } from '../context/auth/AuthContext';
 import { Link, Navigate } from 'react-router-dom';
+import { baseURL } from '../api/passwords';
 
 function isValidEmail(email: string) {
   const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -47,7 +48,7 @@ const Register = () => {
         password,
       };
       const response = await fetch(
-        'http://localhost:3000/password-api/users/register',
+        baseURL + '/password-api/users/register',
         {
           method: 'POST',
           headers: {
@@ -73,7 +74,7 @@ const Register = () => {
           email,
         };
         const otpResponse = await fetch(
-          'http://localhost:3000/password-api/otp/generate',
+          baseURL + '/password-api/otp/generate',
           {
             method: 'POST',
             headers: {

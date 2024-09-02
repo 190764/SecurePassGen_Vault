@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Lottie from 'lottie-react';
 import animation from '../assets/trash.json';
 import { AuthContext } from '../context/auth/AuthContext';
+import { baseURL } from '../api/passwords';
 
 const PasswordItem: FC<PasswordProps> = ({
   password,
@@ -20,7 +21,7 @@ const PasswordItem: FC<PasswordProps> = ({
       const data = { id: password._id };
       console.log(data);
       const response = await fetch(
-        'http://localhost:3000/password-api/passwords/delete',
+        baseURL + '/password-api/passwords/delete',
         {
           method: 'DELETE',
           headers: {

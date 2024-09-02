@@ -1,6 +1,7 @@
 import { ChangeEvent, useContext, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { AuthContext } from '../context/auth/AuthContext';
+import { baseURL } from '../api/passwords';
 
 const OtpVerification = () => {
   const [otp, setOtp] = useState('');
@@ -25,7 +26,7 @@ const OtpVerification = () => {
       };
       console.log(body);
       const response = await fetch(
-        'http://localhost:3000/password-api/otp/verify',
+        baseURL + '/password-api/otp/verify',
         {
           method: 'POST',
           headers: {
@@ -40,7 +41,7 @@ const OtpVerification = () => {
         const temp = {
           email: user?.email,
         };
-        const deleteReq = await fetch('https://localhost:3000/users/register', {
+        const deleteReq = await fetch(baseURL + '/users/register', {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
@@ -68,7 +69,7 @@ const OtpVerification = () => {
             email: user?.email,
           };
           const deleteReq = await fetch(
-            'https://localhost:3000/users/register',
+            baseURL + '/users/register',
             {
               method: 'DELETE',
               headers: {

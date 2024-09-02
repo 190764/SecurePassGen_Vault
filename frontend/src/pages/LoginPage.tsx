@@ -1,6 +1,7 @@
 import { useContext, useState, ChangeEvent } from 'react';
 import { AuthContext } from '../context/auth/AuthContext';
 import { Link, Navigate } from 'react-router-dom';
+import { baseURL } from '../api/passwords';
 
 function isValidEmail(email: string) {
   const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -29,7 +30,7 @@ const Login = () => {
         password,
       };
       const response = await fetch(
-        'http://localhost:3000/password-api/users/login',
+        baseURL + '/password-api/users/login',
         {
           method: 'POST',
           headers: {
