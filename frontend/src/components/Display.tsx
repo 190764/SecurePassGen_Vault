@@ -23,7 +23,7 @@ const Display = () => {
         username,
       };
       const response = await fetch(
-        'http://localhost:3000/password-api/passwords',
+        `${import.meta.env.API_URL}/password-api/passwords`,
         {
           method: 'POST',
           headers: {
@@ -48,7 +48,7 @@ const Display = () => {
     const fetchResponse = async () => {
       try {
         const response = await fetch(
-          'http://localhost:3000/password-api/passwords',
+          `${import.meta.env.VITE_API_URL}/password-api/passwords`,
           {
             method: 'GET',
             headers: {
