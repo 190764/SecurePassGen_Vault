@@ -29,7 +29,7 @@ const Login = () => {
         email,
         password,
       };
-      console.log(baseURL, baseURL + '/password-api/users/login')
+
       const response = await fetch(
         baseURL + '/password-api/users/login',
         {
