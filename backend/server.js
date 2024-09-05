@@ -14,7 +14,7 @@ const server = express();
 })();
 
 server.use(express.json());
-server.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
+// server.use(cors());
 server.use('/password-api/users', userRouter);
 server.use('/password-api/passwords', passwordRouter);
 server.use('/password-api/otp', otpRouter);

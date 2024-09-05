@@ -23,7 +23,7 @@ const Display = () => {
         username,
       };
       const response = await fetch(
-        `${import.meta.env.API_URL}/password-api/passwords`,
+        `${import.meta.env.VITE_API_URL}/password-api/passwords`,
         {
           method: 'POST',
           headers: {
